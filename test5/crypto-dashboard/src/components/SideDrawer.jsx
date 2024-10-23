@@ -1,4 +1,5 @@
-import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Input } from "@chakra-ui/react";
+import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay } from "@chakra-ui/react";
+import SideNav from "./SideNav";
 
 function SideDrawer({ isOpen, onClose }) {
 
@@ -12,18 +13,12 @@ function SideDrawer({ isOpen, onClose }) {
             <DrawerOverlay />
             <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader>Create your account</DrawerHeader>
 
                 <DrawerBody>
+                    <SideNav />
                     
                 </DrawerBody>
 
-                <DrawerFooter>
-                    <Button variant='outline' mr={3} onClick={onClose}>
-                    Cancel
-                    </Button>
-                    <Button colorScheme='blue'>Save</Button>
-                </DrawerFooter>
             </DrawerContent>
         </Drawer>
         </>

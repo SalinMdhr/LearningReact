@@ -1,10 +1,11 @@
+import DashboardLayout from "../../components/DashboardLayout";
 
 
 function Support() {
     return(
-        <div>
+        <DashboardLayout title={"Support"}>
             
-        </div>
+        </DashboardLayout>
     );
 }
 

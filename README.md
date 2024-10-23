@@ -28,20 +28,40 @@
     }
 `
 
-#   IMPORT `MENU`
+#   IMPORT `MENU` 
+    {
     
-    <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-            Actions
-        </MenuButton>
-        <MenuList>
-            <MenuItem>Download</MenuItem>
-            <MenuItem>Create a Copy</MenuItem>
-            <MenuItem>Mark as Draft</MenuItem>
-            <MenuItem>Delete</MenuItem>
-            <MenuItem>Attend a Workshop</MenuItem>
-        </MenuList>
-    </Menu>
+        <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                Actions
+            </MenuButton>
+            <MenuList>
+                <MenuItem>Download</MenuItem>
+                <MenuItem>Create a Copy</MenuItem>
+                <MenuItem>Mark as Draft</MenuItem>
+                <MenuItem>Delete</MenuItem>
+                <MenuItem>Attend a Workshop</MenuItem>
+            </MenuList>
+        </Menu>
+    }
+
+#   IMPORT `TABS`
+    {
+`        <Tabs variant='enclosed'>
+            <TabList>
+                <Tab>One</Tab>
+                <Tab>Two</Tab>
+            </TabList>
+            <TabPanels>
+                <TabPanel>
+                <p>one!</p>
+                </TabPanel>
+                <TabPanel>
+                <p>two!</p>
+                </TabPanel>
+            </TabPanels>
+        </Tabs>             `
+    }
 
 }
 

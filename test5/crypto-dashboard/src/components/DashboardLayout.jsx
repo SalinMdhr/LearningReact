@@ -9,11 +9,24 @@ function DashboardLayout({ title, children }) {
 
     return(
         <Flex>
-            <SideNav />
+            <Box 
+                display={
+                    {
+                        base: "none",
+                        lg: "flex",
+                    }
+                }
+            >
+                <SideNav />
+            </Box>
             <SideDrawer isOpen={isOpen} onClose={onClose} />
             <Box flexGrow={1}>
-                <TopNav title={title} />
-                <Container maxW={"1120px"} px={"50px"}>{children}</Container>
+                <TopNav title={title} onOpen={onOpen} />
+                <Container px={"66px"} maxW={"1120px"} mt={"16px"} overflowX={"hidden"} overflowY={"auto"} 
+                    h={"calc(100vh - 88px)"}
+                >
+                    {children}
+                </Container>
             </Box>
         </Flex>
     );
