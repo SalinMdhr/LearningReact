@@ -123,7 +123,7 @@ export const theme = extendTheme({
               fontSize: "sm",
               pb: "0",
               _focus: {
-                boxShadow: "0 0 0 1px #5F00D9",
+                boxShadow: "0 0 5px #5F00D9",
               },
             },
           },
@@ -137,7 +137,7 @@ export const theme = extendTheme({
             fontSize: "sm",
 
             _focus: {
-              boxShadow: "0 0 0 1px #5F00D9",
+              boxShadow: "0 0 5px 0 #5F00D9",
             },
           },
         },

@@ -1,23 +1,28 @@
 # For this we will be using `vite` and `chakra UI`
 
-## INSTALLATION OF `VITE` {
-    npm create vite@latest
-    This will create your project directory with essential files.
+## INSTALLATION OF `VITE` 
+```bash
+npm create vite@latest
+```
 
-`    npm i ` command installs the packages that resides within  project directory
-}
+This will create your project directory with essential files.
 
-## INSTALLATION OF `CHAKRA UI` {
-`    https://v2.chakra-ui.com/getting-started       `   ----- DOCUMENTATION
+npm i command installs the packages that resides within  project directory
 
-#    npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
-`
+## INSTALLATION OF `CHAKRA UI` 
+For more info look into [Chakra UI](https://v2.chakra-ui.com/getting-started) Documentation
+
+```bash
+npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+```
+
+```jsx
     // 1. import `ChakraProvider` component
     import { ChakraProvider } from "@chakra-ui/react"
 
     function App() {
-`        // 2. Wrap ChakraProvider at the root of your app `
+        // 2. Wrap ChakraProvider at the root of your app `
         createRoot(document.getElementById('root')).render(
             <StrictMode>
                 <ChakraProvider>
@@ -26,28 +31,30 @@
             </StrictMode>,
         )
     }
-`
+```
 
 #   IMPORT `MENU` 
-    {
+```jsx
     
-        <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                Actions
-            </MenuButton>
-            <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
-                <MenuItem>Mark as Draft</MenuItem>
-                <MenuItem>Delete</MenuItem>
-                <MenuItem>Attend a Workshop</MenuItem>
-            </MenuList>
-        </Menu>
-    }
+    <Menu>
+        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+            Actions
+        </MenuButton>
+        <MenuList>
+            <MenuItem>Download</MenuItem>
+            <MenuItem>Create a Copy</MenuItem>
+            <MenuItem>Mark as Draft</MenuItem>
+            <MenuItem>Delete</MenuItem>
+            <MenuItem>Attend a Workshop</MenuItem>
+        </MenuList>
+    </Menu>
+    
+```    
 
 #   IMPORT `TABS`
-    {
-`        <Tabs variant='enclosed'>
+
+```jsx    
+        <Tabs variant='enclosed'>
             <TabList>
                 <Tab>One</Tab>
                 <Tab>Two</Tab>
@@ -60,53 +67,70 @@
                 <p>two!</p>
                 </TabPanel>
             </TabPanels>
-        </Tabs>             `
-    }
+        </Tabs>             
+```
 
-#   IMPORT `INPUT`
-    {
-`               
-    }
 
+###     INSTALL `REACT ROUTER` FOR ROUTING ONE PAGE TO ANOTHER 
+
+For routing one page to another [React-Router](https://reactrouter.com/en/main/start/tutorial) package is used.
+
+```bash
+npm install react-router-dom        
+```
+
+```jsx
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Dashboard />,
+  },
+  {
+    path: "/transactions",
+    element: <Transactions />,
+  },
+  {
+    path: "/support",
+    element: <Support />,
+  },
+]);
+
+function App() {
+  return(
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
+```
 
 
-###     INSTALL `REACT ROUTER` FOR ROUTING ONE PAGE TO ANOTHER {
+##    INSTALL THE PACKAGE FOR `UBUNTU` FONT
 
-`       npm install react-router-dom        `
+Within your app entry file or site component, import it in. For more info visit [Font source](https://www.npmjs.com/package/@fontsource/ubuntu ) .
 
-`       https://reactrouter.com/en/main/start/tutorial          `
+```bash
+npm install @fontsource/ubuntu    
+```
 
-`//App.jsx`
-
-}
-
-
-###     INSTALL THE PACKAGE FOR `UBUNTU` FONT {
-
-`       npm install @fontsource/ubuntu      `
-`   
-    `Within your app entry file or site component, import it in.`
-`    
-    `import "@fontsource/ubuntu"; // Defaults to weight 400` `IMPORT IT WITHIN` main.jsx
-    `import "@fontsource/ubuntu/400.css"; // Specify weight`
-    `import "@fontsource/ubuntu/400-italic.css"; // Specify weight and style`
-`
-
-##     FOR MORE INFO 
-`      https://www.npmjs.com/package/@fontsource/ubuntu             `
-
-}
-
-##      INSTALL `REACT ICON` PACKAGE FOR USING ICONS IN YOUR PROJECT {
-`       npm i react-icons --save        `
-
-#       SEARCH ICONS FROM HERE
-`       https://react-icons.github.io/react-icons/search/#q=search              `
-
-}
+```jsx
+    import "@fontsource/ubuntu"; // Defaults to weight 400 `IMPORT IT WITHIN` main.jsx
+    import "@fontsource/ubuntu/400.css"; // Specify weight
+    import "@fontsource/ubuntu/400-italic.css"; // Specify weight and style
+```
 
 
+##      INSTALL `REACT ICON` PACKAGE FOR USING ICONS IN YOUR PROJECT
+```bash
+npm i react-icons --save
+```
+
+Search Icons From [React-Icons](https://react-icons.github.io/react-icons/search/#q=search)
 
 # React + Vite
 

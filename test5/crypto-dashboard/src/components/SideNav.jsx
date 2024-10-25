@@ -2,9 +2,15 @@ import {Box, Heading, HStack, Icon, Stack, Text} from "@chakra-ui/react";
 import { RxDashboard } from "react-icons/rx";
 import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function SideNav() {
+
+    const location = useLocation();
+
+    const isLinkActive = (link) => {
+        return link === location.pathname;
+    }
 
     const navLinks = [
         {
@@ -58,8 +64,10 @@ function SideNav() {
                             <Link to={nav.link} key={nav.text}>
                                 <HStack  
                                     borderRadius="10px"
-                                    color="#797E82" cursor="pointer"
+                                    cursor="pointer"
                                     py="12px" px="16px" 
+                                    color={isLinkActive(nav.link) ? "#171717" : "#797E82"}
+                                    bg={isLinkActive(nav.link) ? "#F3F3F7" : "transparent"}
                                     _hover={{
                                         color: "#171717",
                                         bg: "#F3F3F7"    
@@ -83,8 +91,10 @@ function SideNav() {
                 <Link to={"/support"}>
                     <HStack 
                         borderRadius="10px"
-                        color="#797E82" cursor="pointer"
+                        color={isLinkActive("/support") ? "#171717" : "#797E82"}
+                        cursor="pointer"
                         py="12px" px="16px" 
+                        bg={isLinkActive("/support") ? "#F3F3F7" : "transparent"}
                             _hover={{
                                 color: "#171717",
                                 bg: "#F3F3F7"    
